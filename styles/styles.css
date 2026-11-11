@@ -47,3 +47,52 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+
+/*************************************************************
+                      MAIN STYLES
+*************************************************************/
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+h1{
+    font-size: 2.2em;
+    /* ems are relative to the current font size - default font size is 16px...  2.2em= 16*22= 35.2px */
+
+    padding: 0.5em;
+    /* because the font size of this element is set to 2.2em(or 35.2px), setting padding with em is relative to that font size ,or 0.5*35.2= 17.6px */
+
+    margin-bottom: 1rem;
+    /* an rem is always relative to the root font size, or the font size set on your html element (default is 16px) - so 1rem - 16px */
+
+}
+
+h3{
+    font-size: 1.6em;
+    padding: 0.5em;
+}
+
+article div{
+    font-size: 2.2em;
+    padding: 10px;
+    border: 2px solid darkmagenta;
+    background-color: blueviolet;
+}
+
+
+
+/*************************************************************
+                      FLEXBOX STYLES
+*************************************************************/
+
+section:nth-of-type(1) article{
+    /* nth-of types selects the first element that matches the type (in this case, section) */
+
+    /* display:flex, by default, makes things sit next to each other */
+    display: flex;
+}
