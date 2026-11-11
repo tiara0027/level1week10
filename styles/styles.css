@@ -96,3 +96,67 @@ section:nth-of-type(1) article{
     /* display:flex, by default, makes things sit next to each other */
     display: flex;
 }
+
+section:nth-of-type(2) article{
+    display: flex;
+
+    /* flex-direction lets you control which way the elements stakcs - whether horizontaly (row) or verticaly(column) or in reverse */
+    flex-direction: row-reverse;
+}
+
+section:nth-of-type(3) article{
+    display: flex;
+
+    /* justify-content allows you to control how elements are distributed in their parent 
+    flex-start and fle-end are difined based on reading direction of the user's language
+    space-between puts an equal amount of space between elements 
+    space-around adds an equal amount of space on either sides of each elements
+    space-evenly equally distributes the element in the available space*/
+    justify-content: space-evenly;
+}
+
+section:nth-of-type(4) article{
+    display: flex;
+}
+/* you can tell the flexted elements to grow to take up the available space  */
+
+section:nth-of-type(4) article div{
+    flex-grow: 1;
+}
+
+section:nth-of-type(4) article div:nth-of-type(2){
+    /* tell the second div to take up twice as much space as the others */
+    flex-grow: 2;
+}
+
+
+
+
+/*************************************************************
+                      FLEXBOX NAV EXAMPLE
+*************************************************************/
+
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+
+    /* for text based nav, distribute the content evenly */
+    /* justify-content: space-evenly; */
+}
+
+nav li{
+    flex-grow: 1;
+    display: flex;
+}
+
+nav ul a{
+    flex-grow: 1;
+    padding: 10px;
+    background-color: darkblue;
+    text-align: center;
+}
+
+nav ul a:hover{
+    background-color: cadetblue;
+}
